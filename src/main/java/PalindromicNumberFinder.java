@@ -1,6 +1,6 @@
 public class PalindromicNumberFinder {
     private int num;
-    private int miles;
+
     // constructor
     public PalindromicNumberFinder(int num){
         this.num = num;
@@ -13,12 +13,12 @@ public class PalindromicNumberFinder {
 
     // this method should find the next palindromic number
     public int searchForPalindromicNum(int num){
-        for(int i = num+1; i>=num; i--){
+        for(int i = (num+1); i>=num; i++){
           if(testPalindromicNum(i)==true){
             return i-num;
           }
-         }
-    return 0;    
+        }
+      return 0;
     }
 
     // this is a helper method for searchForPalindromicNum. It's purpose is to test if a number is actually a palindrome
@@ -36,10 +36,10 @@ public class PalindromicNumberFinder {
     public String reverseNum(int num){
         String reversed1 = "";
         String reversed = Integer.toString(num);
-        for(int i = reversed1.length() - 1; i >= 0; i--)
-       {
+        for(int i = reversed.length()-1; i >= 0; i--)
+        {
          reversed1 +=reversed.charAt(i);
-       }
+        }
       return reversed1;
 
     }
